@@ -23,5 +23,5 @@ export default {
             dark: '#282828',
         }
     },
-    plugins: [],
+    plugins: [require('@tailwindcss/typography'),],
 };

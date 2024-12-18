@@ -6,42 +6,47 @@
 
         <title>Athens Creek</title>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ledger&family=Outfit:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased bg-light text-dark">
         <header class="flex flex-col w-full">
-            <div class="px-[2rem] py-[0.75rem] w-full bg-primary/90 border-b-2 border-secondary">
+            <!-- <div class="px-[2rem] py-[0.75rem] w-full bg-primary/90">
                 <div class="mx-auto max-w-screen-2xl flex justify-end">
                     <a href="call:778-952-7690" class="flex items-center text-[0.75rem] gap-x-[0.5rem] group font-bold">
                         <x-icons.phone class="h-[1rem] w-[1rem] fill-secondary group-hover:fill-light duration-200"></x-icons.phone>
                         <span class="group-hover:text-light text-secondary duration-200">(778) 952 7690</span>
                     </a>
                 </div>
-            </div>
+            </div> -->
 
             <div class="p-[2rem] w-full">
-                <div class="mx-auto max-w-screen-2xl flex items-center justify-between font-bold text-lg">
+                <div class="mx-auto max-w-screen-2xl flex items-center justify-between font-bold text-md">
                     <img class="h-[60px]" src="{{asset('/storage/images/athens-creek-logo.png')}}">
 
-                    <nav class="flex items-center gap-x-24 uppercase">
-                        <a href="Home">Home</a>
-                        <a href="Lifestyle">Lifestyle</a>
-                        <a href="Suites">Suites</a>
+                    <nav class="flex items-center gap-x-12 uppercase">
+                        <a href="Home" class="italic text-primary">Home</a>
+                        <a href="Lifestyle" class="duration-200 hover:text-primary">Lifestyle</a>
+                        <a href="Suites" class="duration-200 hover:text-primary">Suites</a>
+                        <a href="gallery" class="duration-200 hover:text-primary">Gallery</a>
+                        <a href="#" class="bg-primary text-light p-2 text-center duration-200 hover:opacity-80 rounded-full px-6">Contact Us</a>
                     </nav>
-
-                    <a class="px-[1rem] py-[0.5rem] text-light bg-primary/90 border-2 border-secondary/50 rounded-sm uppercase" href="">Contact Us</a>
                 </div>
             </div>
         </header>
 
         {{ $slot }}
 
-        <div class="bg-dark w-full px-[2rem] border-y-2 border-secondary/50">
-            <div class="mx-auto grid grid-cols-2 w-full max-w-screen-2xl py-[4rem] gap-x-[6rem]">
+        <div class="bg-dark w-full px-[2rem]">
+            <div class="mx-auto grid grid-cols-2 w-full max-w-screen-2xl py-[8rem] gap-x-[6rem]">
                 <div class="col-span-2  text-light mb-[4rem]">
-                    <h3 class="text-[2rem] font-bold mb-[1rem]">Contact Us</h3>
+                    <h3 class="text-[2rem] ledger font-bold mb-[1rem]">Contact Us</h3>
                     
-                    <span class="leading-[1.5rem] text-[1.5rem] mb-[2rem] font-medium w-10/12">Learn more about living at Athens Creek or
+                    <span class="text-lg mb-[2rem] font-medium w-10/12">Learn more about living at Athens Creek or
                     book a visit with us</span>
                 </div>
 
@@ -77,8 +82,8 @@
                         <textarea class="px-[1rem] min-h-[156px] py-[0.75rem] text-dark" placeholder="Your message..."></textarea>
                     </label>
 
-                    <div class="w-full flex items-center mt-[1rem]">
-                        <button type="submit" class="bg-primary text-light font-bold px-[2rem] py-[0.75rem] rounded-sm">Submit</button>
+                    <div class="w-full flex items-center mt-[2rem]">
+                        <button type="submit" class="bg-primary text-light font-bold px-[2rem] py-[0.75rem] rounded-full uppercase duration-200 hover:opacity-80">Submit</button>
                     </div>
                 </form>
                 
@@ -109,6 +114,7 @@
                         <a href="">Back To Top</a>
                         <a href="">Lifestyle</a>
                         <a href="">Suites</a>
+                        <a href="">Gallery</a>
                     </nav>
                     
                     <span class="text-md text-secondary"><span>© 2024 Athens Creek Retirement Lodging. </span><a href="#" class="underline">Sitemap</a></span>
