@@ -14,27 +14,12 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased bg-light text-dark">
-        <header class="flex flex-col w-full">
-            <!-- <div class="px-[2rem] py-[0.75rem] w-full bg-primary/90">
-                <div class="mx-auto max-w-screen-2xl flex justify-end">
-                    <a href="call:778-952-7690" class="flex items-center text-[0.75rem] gap-x-[0.5rem] group font-bold">
-                        <x-icons.phone class="h-[1rem] w-[1rem] fill-secondary group-hover:fill-light duration-200"></x-icons.phone>
-                        <span class="group-hover:text-light text-secondary duration-200">(778) 952 7690</span>
-                    </a>
-                </div>
-            </div> -->
-
-            <div class="p-[2rem] w-full">
-                <div class="mx-auto max-w-screen-2xl flex items-center justify-between font-bold text-md">
-                    <img class="h-[60px]" src="{{asset('/storage/images/athens-creek-logo.png')}}">
-
-                    <nav class="flex items-center gap-x-12 uppercase">
-                        <a href="Home" class="italic text-primary">Home</a>
-                        <a href="Lifestyle" class="duration-200 hover:text-primary">Lifestyle</a>
-                        <a href="Suites" class="duration-200 hover:text-primary">Suites</a>
-                        <a href="gallery" class="duration-200 hover:text-primary">Gallery</a>
-                        <a href="#" class="bg-primary text-light p-2 text-center duration-200 hover:opacity-80 rounded-full px-6">Contact Us</a>
-                    </nav>
+        <header class="flex flex-col w-full fixed top-0 z-50 bg-[white]">
+            <div class="px-8 py-4 w-full">
+                <div x-data="{ activePage: window.location.pathname }" class="mx-auto max-w-screen-2xl flex items-center justify-between font-bold text-md">
+                    <img class="h-10 lg:h-[60px]" src="{{asset('/storage/images/athens-creek-logo.png')}}">
+                    @include('components.nav.desktop')
+                    @include('components.nav.mobile')
                 </div>
             </div>
         </header>
@@ -42,15 +27,15 @@
         {{ $slot }}
 
         <div class="bg-dark w-full px-[2rem]">
-            <div class="mx-auto grid grid-cols-2 w-full max-w-screen-2xl py-[8rem] gap-x-[6rem]">
-                <div class="col-span-2  text-light mb-[4rem]">
-                    <h3 class="text-[2rem] ledger font-bold mb-[1rem]">Contact Us</h3>
+            <div class="mx-auto grid grid-cols-2 w-full max-w-screen-2xl py-12 lg:py-[6rem] gap-x-[6rem]">
+                <div id="contact" class="col-span-2  text-light mb-8 lg:mb-16">
+                    <h2 class="text-[2rem] ledger font-bold mb-[1rem]">Contact Us</h2>
                     
                     <span class="text-lg mb-[2rem] font-medium w-10/12">Learn more about living at Athens Creek or
                     book a visit with us</span>
                 </div>
 
-                <form class="flex flex-col items-end gap-y-[1rem] [&_textarea]:rounded-sm [&_select]:rounded-sm [&_input]:rounded-sm">
+                <form class="flex flex-col col-span-2 lg:col-span-1 items-end gap-y-[1rem] [&_textarea]:rounded-sm [&_select]:rounded-sm [&_input]:rounded-sm">
                     <label class="text-light flex flex-col w-full gap-y-1 font-bold">
                         Name
                         <input type="text" class="px-[1rem] text-dark py-[0.75rem]" placeholder="John Doe">
@@ -82,12 +67,12 @@
                         <textarea class="px-[1rem] min-h-[156px] py-[0.75rem] text-dark" placeholder="Your message..."></textarea>
                     </label>
 
-                    <div class="w-full flex items-center mt-[2rem]">
+                    <div class="w-full flex items-center mt-4 lg:mt-8">
                         <button type="submit" class="bg-primary text-light font-bold px-[2rem] py-[0.75rem] rounded-full uppercase duration-200 hover:opacity-80">Submit</button>
                     </div>
                 </form>
                 
-                <div class="flex flex-col gap-y-[1rem] text-light">
+                <div class="flex flex-col gap-y-[1rem] col-span-2 lg:col-span-1 mt-12 lg:mt-0 text-light">
                     <a href="call:778-952-7690" class="flex items-center text-[1rem] gap-x-[0.5rem] group font-bold">
                         <x-icons.phone class="h-[1.5rem] w-[1.5rem] fill-secondary group-hover:fill-light duration-200"></x-icons.phone>
                         <span class="text-light duration-200">(778) 952 7690</span>
@@ -108,7 +93,7 @@
         </div>
 
         <footer class="w-full p-[2rem] bg-primary ">
-            <div class="flex justify-between max-w-screen-2xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between max-w-screen-2xl mx-auto">
                 <div class="flex flex-col space-y-[1rem]">
                     <nav class="flex items-center space-x-10 text-light font-bold">
                         <a href="">Back To Top</a>
@@ -120,9 +105,9 @@
                     <span class="text-md text-secondary"><span>© 2024 Athens Creek Retirement Lodging. </span><a href="#" class="underline">Sitemap</a></span>
                 </div>
 
-                <div class="flex flex-col space-y-[1rem] items-end">
+                <div class="flex flex-col space-y-[1rem] items-start mb-12 md:mb-0 -order-1 md:order-1">
                     <span class="text-light font-bold select-none">Follow Us</span>
-                    <a href="#" class="group h-[1.5rem] w-[1.5rem] fill-secondary group-hover:fill-light duration-200"><x-icons.facebook></x-icons.facebook></a>
+                    <a href="#" class="h-[1.5rem] w-[1.5rem] fill-secondary hover:fill-light duration-200"><x-icons.facebook></x-icons.facebook></a>
                 </div>
             </div>
         </footer>
