@@ -14,7 +14,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased bg-light text-dark">
-        <header class="flex flex-col w-full fixed top-0 z-50 bg-[white]">
+        <header class="flex flex-col w-full fixed top-0 z-40 bg-[white]">
             <div class="px-8 py-4 w-full">
                 <div x-data="{ activePage: window.location.pathname }" class="mx-auto max-w-screen-2xl flex items-center justify-between font-bold text-md">
                     <img class="h-10 lg:h-[60px]" src="{{asset('/storage/images/athens-creek-logo.png')}}">
@@ -43,17 +43,17 @@
 
                     <label class="text-light flex flex-col w-full gap-y-1 font-bold">
                         Email Address
-                        <input type="text" class="px-[1rem] text-dark py-[0.75rem]" placeholder="John Doe">
+                        <input type="email" class="px-[1rem] text-dark py-[0.75rem]" placeholder="john@example.com">
                     </label>
 
                     <label class="text-light flex flex-col w-full gap-y-1 font-bold">
                         Phone
-                        <input type="text" class="px-[1rem] text-dark py-[0.75rem]" placeholder="John Doe">
+                        <input type="tel" class="px-[1rem] text-dark py-[0.75rem]" placeholder="123456789">
                     </label>
 
                     <label class="text-light flex flex-col w-full gap-y-1 font-bold">
                         I'm interested in learning more about...
-                        <select class="px-[1rem] py-[0.75rem] text-dark">
+                        <select class="px-[1rem] py-[0.75rem] text-dark" style="border-right:12px solid transparent;">
                             <option selected>Suites</option>
                             <option>Services</option>
                             <option>Pricing</option>
