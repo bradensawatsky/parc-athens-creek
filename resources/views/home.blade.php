@@ -1,24 +1,7 @@
 <x-layout>
-    <div class="flex justify-center items-center min-h-[700px] relative w-full border-secondary">
-        <div class="flex z-20 justify-center items-center text-light font-medium flex-col gap-y-[2rem]">
-            <span class="text-[1.5rem]">Athens Creek Retirement Lodge</span>
-            <h1 class="ledger text-center leading-[3.5rem] md:leading-[4rem]">Heritage Charm <br>& Modern Living</h1>
-            <a class="text-[1.25rem] flex items-center group space-x-[1rem]" href="#contact">
-                <span class="group-hover:text-secondary duration-200 uppercase">Let’s Chat</span>
-                <x-icons.cta class="w-[1rem] group-hover:fill-secondary duration-200 h-[1rem] fill-light"></x-icons.cta>
-            </a>
-        </div>
-
-        <div class="absolute z-10 bg-dark/60 h-full w-full">
-
-        </div>
-
-        <div class="absolute z-0 top-0 left-0 w-full h-full">
-            <img class="object-cover object-bottom w-full h-full" src="{{asset('/storage/images/hero.png')}}">
-        </div>
-    </div>
+    @include('components.hero.default')
     
-    <div class="w-full py-12 lg:py-[6rem] px-4 md:px-12 bg-primary/5">
+    <section class="w-full py-12 lg:py-[6rem] px-4 md:px-12 bg-primary/5">
         <div class="max-w-screen-2xl mx-auto grid grid-cols-2 gap-x-[3rem]">
             <div class="flex flex-col space-y-6 lg:space-y-8 py-[1rem] w-full lg:w-10/12 col-span-2 lg:col-span-1">
                 <h2 class="text-primary font-medium ledger">
@@ -57,10 +40,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="flex flex-col md:flex-row  relative w-full max-h-[650px]">
-        <div class="z-20 text-light font-medium bg-primary flex flex-col md:items-end items-center gap-y-[2rem] text-center w-full md:w-5/12 order-2 md:-order-1">
+    <section class="flex flex-col md:flex-row  relative w-full max-h-[650px]">
+        <div class="z-20 text-light font-medium bg-primary flex flex-col md:items-end items-center gap-y-[2rem] text-center md:text-left w-full md:w-5/12 order-2 md:-order-1">
             <div class="bg-primary pr-4 lg:pr-[3rem] pl-[1rem] py-[3rem] h-full z-10 flex flex-col justify-center items-center space-y-6 lg:space-y-[3rem]">
                     <h2 class="ledger w-full">Conveniently Located</h2>
                     <p class="max-w-[500px]">Athens Creek is conveniently located near Cherry Lane Shopping Centre, banking services, City Transit,
@@ -79,5 +62,5 @@
             <div class="absolute z-10 bg-dark/20 h-full w-full"></div>
             <img class="object-cover h-full w-full" src="{{asset('/storage/images/cherrylane.webp')}}">
         </div>
-    </div>
+    </section>
 </x-layout>

@@ -12,22 +12,22 @@
 }
 
 p {
-    @apply text-sm lg:text-base;
+    @apply text-sm md:text-base;
 }
 
 h1 {
-    @apply font-bold text-4xl lg:text-6xl ledger;
+    @apply font-bold text-4xl md:text-6xl ledger;
 }
 
 h2 {
-    @apply text-3xl lg:text-4xl font-bold ledger;
+    @apply text-3xl md:text-4xl font-bold ledger;
 }
 
 h3 {
-    @apply text-2xl lg:text-3xl font-semibold ledger;
+    @apply text-2xl md:text-3xl font-semibold ledger;
 }
 
 .button--primary {
-    @apply bg-light font-medium text-tertiary py-2 lg:py-3 px-8 lg:px-12 duration-200 hover:opacity-80 rounded-full text-nowrap text-sm lg:text-base;
+    @apply bg-light font-medium text-tertiary py-2 md:py-3 px-8 md:px-12 duration-200 hover:opacity-80 rounded-full text-nowrap text-sm md:text-base;
 
 }

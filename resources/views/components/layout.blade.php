@@ -96,10 +96,10 @@
             <div class="flex flex-col md:flex-row justify-between max-w-screen-2xl mx-auto">
                 <div class="flex flex-col space-y-[1rem]">
                     <nav class="flex items-center space-x-10 text-light font-bold">
-                        <a href="">Back To Top</a>
-                        <a href="">Lifestyle</a>
-                        <a href="">Suites</a>
-                        <a href="">Gallery</a>
+                        <a href="#">Back To Top</a>
+                        <a href="/lifestyle">Lifestyle</a>
+                        <a href="/suites">Suites</a>
+                        <a href="/gallery">Gallery</a>
                     </nav>
                     
                     <span class="text-md text-secondary"><span>© 2024 Athens Creek Retirement Lodging. </span><a href="#" class="underline">Sitemap</a></span>
@@ -107,7 +107,7 @@
 
                 <div class="flex flex-col space-y-[1rem] items-start mb-12 md:mb-0 -order-1 md:order-1">
                     <span class="text-light font-bold select-none">Follow Us</span>
-                    <a href="#" class="h-[1.5rem] w-[1.5rem] fill-secondary hover:fill-light duration-200"><x-icons.facebook></x-icons.facebook></a>
+                    <a href="https://www.facebook.com/AthensCreekRetirementLodge/" target="_blank" class="h-[1.5rem] w-[1.5rem] fill-secondary hover:fill-light duration-200"><x-icons.facebook></x-icons.facebook></a>
                 </div>
             </div>
         </footer>
