@@ -17,7 +17,9 @@
         <header class="flex flex-col w-full fixed top-0 z-40 bg-[white]">
             <div class="px-8 py-4 w-full">
                 <div x-data="{ activePage: window.location.pathname }" class="mx-auto max-w-screen-2xl flex items-center justify-between font-bold text-md">
-                    <img class="h-10 lg:h-[60px]" src="{{asset('/storage/images/athens-creek-logo.png')}}">
+                    <a href="/">
+                        <img class="h-10 lg:h-[60px]" src="{{asset('/storage/images/athens-creek-logo.png')}}">
+                    </a>
                     @include('components.nav.desktop')
                     @include('components.nav.mobile')
                 </div>

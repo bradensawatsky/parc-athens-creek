@@ -55,44 +55,46 @@
         </div>
     </section>
 
-    <section x-data="{ activeIndex: null, bgUrl: 'http://127.0.0.1:8000/storage/images/hero.png',
-    communityServices: [
-    { title: 'Dining Room',
-     description: 'Delicious and nutritious meals every single day in our dining room!',
-     image: 'http://127.0.0.1:8000/storage/images/hero.png'
-    },
-    { title: 'Emergency Response',
-     description: 'We have 24-hour Medic-Alert Emergency Call Service to ensure your safety.',
-     image: 'http://127.0.0.1:8000/storage/images/hero-2.avif'
-    },
-    { title: 'Housekeeping',
-     description: 'Weekly housekeeping services.',
-     image: 'http://127.0.0.1:8000/storage/images/hero-2.avif'
-    },
-    { title: 'Personal Laundry',
-     description: 'Optional personal laundry services to ensure you always feel your best.',
-     image: 'http://127.0.0.1:8000/storage/images/hero-2.avif'
-    },
-    { title: 'Social Events',
-     description: 'Enjoy a vibrant community with plentiful social activities and events!',
-     image: 'http://127.0.0.1:8000/storage/images/hero-2.avif'
-    },            
+    <section 
+    x-data="{ 
+        activeIndex: null, 
+        bgUrl: 'http://127.0.0.1:8000/storage/images/hero.png',
+        communityServices: [
+            { title: 'Dining Room', description: 'Delicious and nutritious meals every single day in our dining room!', image: 'http://127.0.0.1:8000/storage/images/hero.png' },
+            { title: 'Emergency Response', description: 'We have 24-hour Medic-Alert Emergency Call Service to ensure your safety.', image: 'http://127.0.0.1:8000/storage/images/hero-2.avif' },
+            { title: 'Housekeeping', description: 'Weekly housekeeping services.', image: 'http://127.0.0.1:8000/storage/images/cherrylane.webp' },
+            { title: 'Personal Laundry', description: 'Optional personal laundry services to ensure you always feel your best.', image: 'http://127.0.0.1:8000/storage/images/hero-2.avif' },
+            { title: 'Social Events', description: 'Enjoy a vibrant community with plentiful social activities and events!', image: 'http://127.0.0.1:8000/storage/images/hero-2.avif' },
+        ] 
+    }" 
+    class="w-full py-12 lg:py-[6rem] px-4 md:px-12 bg-secondary"
+>
+    <div class="mx-auto max-w-screen-xl text-center">
+        <h2 class="text-dark mb-8">Community Services</h2>
+        <p class="max-w-[800px] mx-auto">
+            Our monthly rental fee includes an array of services, such as lunch and dinner served in the dining room, continental-style breakfast in the Bistro from 8-10 AM daily, weekly housekeeping, 24-hour Medic-Alert Emergency Call Service, and individual air conditioning and heat controls. All utilities, including heat, air conditioning, light, and cable, are covered. 
+            Bistro - Enjoy light bites all day long in our wonderful bistro.
+        </p>
+    </div>
+    <div class="bg-cover max-w-screen-xl mx-auto relative mt-12 lg:mt-16">
+        <div 
+            class="absolute w-full h-full bg-cover bg-center duration-150"
+            x-bind:style="{ backgroundImage: activeIndex !== null ? 'url(' + communityServices[activeIndex].image + ')' : 'url(' + bgUrl + ')' }"
+        ></div>
 
-    ] }" class="w-full py-12 lg:py-[6rem] px-4 md:px-12 bg-secondary">
-        <div class="mx-auto max-w-screen-xl text-center">
-            <h2 class="text-primary mb-8">Community Services</h2>
-            <p class="max-w-[800px] mx-auto">Our monthly rental fee includes an array of services, such as lunch and dinner served in the dining room, continental-style breakfast in the Bistro from 8-10 AM daily, weekly housekeeping, 24-hour Medic-Alert Emergency Call Service, and individual air conditioning and heat controls. All utilities, including heat, air conditioning, light, and cable, are covered. 
-                Bistro - Enjoy light bites all day long in our wonderful bistro.</p>
-        </div>
-        <div class="bg-cover max-w-screen-xl mx-auto relative bg-[url('http://127.0.0.1:8000/storage/images/hero-2.avif')]">
+        <div class="relative z-10 flex flex-col">
             <template x-for="(service, index) in communityServices" :key="index">
-                <div x-show="activeIndex === index" class="absolute w-full h-full bg-cover bg-[url('service.image')]" :style="bg-[url('${service.image}')]"></div>
-                <div x-on:mouseover="activeIndex = index; bgUrl = service.image" class="bg-light w-[30rem] p-8 border-primary border-2 cursor-pointer duration" :class="{ 'opacity-60': activeIndex !== index && activeIndex  }">
+                <div 
+                    x-on:mouseover="activeIndex = index; bgUrl = service.image" 
+                    class="bg-light w-full md:w-[30rem] p-8 border-primary border-b-2 md:cursor-pointer transition-opacity duration-300" 
+                    :class="{ 'md:opacity-60': activeIndex !== null && activeIndex !== index }"
+                >
                     <h3 x-text="service.title" class="text-2xl"></h3>
                     <p x-text="service.description"></p>
-                </div>                
+                </div>
             </template>
         </div>
-
-    </section>    
+    </div>
+</section>
+  
 </x-layout>
