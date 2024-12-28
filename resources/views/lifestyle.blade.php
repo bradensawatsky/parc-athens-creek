@@ -4,7 +4,7 @@
     <section class="w-full py-12 lg:py-[6rem] px-4 md:px-12 bg-primary/5">
         <div class="mx-auto max-w-screen-xl text-center">
             <h2 class="text-primary mb-8">Community Amenities</h2>
-            <p class="max-w-[800px] mx-auto">Athens Creek offers various amenities, including bocce ball courts, a putting green, private dining room, games room with pool table, laundry facilities, hair salon, lounge, and library. Residents can make use of secure underground parking for vehicles and scooters. For pet lovers, Athens Creek warmly welcomes small dogs and indoor cats.</p>
+            <p class="text-lg max-w-[800px] mx-auto">Athens Creek offers various amenities, including bocce ball courts, a putting green, private dining room, games room with pool table, laundry facilities, hair salon, lounge, and library. Residents can make use of secure underground parking for vehicles and scooters. For pet lovers, Athens Creek warmly welcomes small dogs and indoor cats.</p>
         </div>
         <div class="grid lg:grid-cols-2 gap-8 max-w-screen-xl mx-auto mt-16">
             <div>
@@ -78,7 +78,7 @@
     </div>
     <div class="bg-cover max-w-screen-xl mx-auto relative mt-12 lg:mt-16">
         <div 
-            class="absolute w-full h-full bg-cover bg-center duration-150"
+            class="absolute w-full h-full bg-cover bg-center"
             x-bind:style="{ backgroundImage: activeIndex !== null ? 'url(' + communityServices[activeIndex].image + ')' : 'url(' + bgUrl + ')' }"
         ></div>
 

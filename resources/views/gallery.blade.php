@@ -24,7 +24,7 @@
         }" 
         class="flex flex-col items-center w-full pt-20">
         <h2>Explore life at Athen's Creek</h2>
-        <p class="font-semibold mb-12">This will be a cool tagline</p>
+        <p class="text-large font-semibold mb-12">This will be a cool tagline</p>
         <div class="bg-secondary px-4 lg:px-12 py-12 lg:py-24 w-full">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-3 max-w-screen-2xl m-auto">
                 <template x-for="(image, index) in galleryImages" :key="index">
@@ -37,7 +37,7 @@
             </div>
         </div>
         <div x-show="galleryOpen"
-            class="fixed z-50 top-0 left-0 bg-dark/60 w-full h-full py-8 lg:p-32"
+            class="fixed z-50 top-0 left-0 bg-dark/80 w-full h-full py-8 lg:p-32"
         >
             <div class="relative m-auto w-full lg:w-[900px]">
             <button 
